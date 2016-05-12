@@ -1,13 +1,3 @@
-import sys #this crap just import the system stuff like exit() stb
-
-for arg in sys.argv: #this is just a simple for ciklus, and sys.argv is a list (0:the name of the file
-    print arg           #1:you write after the file stb stb) argv become as long list as long you write it
-                        #after the filename in terminal
-
-
-
-
-
 #made by the website instructions
 import sys
 i="World"
