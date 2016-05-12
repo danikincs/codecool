@@ -1,16 +1,26 @@
-num1 = int(input('Enter first number(or letter to EXIT): '))
+import sys    #for the exit()
+
+while True:  #i found this try: for debugging, but it works fine here
+    try:
+        number_1 = float(input('Enter first number(or letter to EXIT): '))
+    except ValueError:
+        exit()
+    else:
+        break
+
 operation = input("Enter an operation:")
-num2 = int(input('Enter second number: '))
+number_2 = float(input('Enter second number: '))    #float() for the floating point numbers
 
 
 if operation == "+":
-    sum = float(num1) + float(num2)
+    sum = float(number_1) + float(number_2)
 elif operation == "-":
-    sum = float(num1) - float(num2)
+    sum = float(number_1) - float(number_2)
 elif operation == "*":
-    sum = float(num1) * float(num2)
+    sum = float(number_1) * float(number_2)
 elif operation == "/":
-    sum = float(num1) / float(num2)
+    sum = float(number_1) / float(number_2)
+else:
+    exit()
 
-# Display the the result
-print("The Result is:{0}".format(sum))
+print('The result is {0}'.format(sum)) #print the result on screen
